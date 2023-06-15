@@ -1,0 +1,30 @@
+<div class="wrapper fadeInDown" style="margin-top: 58px;" >
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+   
+
+    <!-- Login Form -->
+    <form action="/admin/adminLogin" method="POST">
+    {{#if loginErr}}
+                <p class="error fadeIn second" style="color: orangered;">Invalid Username or Password</p>
+    {{/if}}
+      <input type="text" id="login" class="fadeIn second" name="Email" placeholder="Admin email">
+      <input type="password" id="password" class="fadeIn third" name="Password" placeholder="Password" autocomplete="off">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+       
+      <h2>ADMIN MODE</h2>
+    </div>
+    <div id="">
+      
+       <a href="/login">
+    <button class="glow-on-hover" type="button">I am a user</button>
+    </div>
+
+  </div>
+</div>
+

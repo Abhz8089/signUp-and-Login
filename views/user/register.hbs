@@ -1,0 +1,111 @@
+
+<head>
+	
+	<style>
+		body {
+			
+			background-color: #f0f0f0;
+		}
+		
+		form {
+			background-color: #fff;
+			padding: 20px;
+			margin: 20px auto;
+			max-width: 500px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+		
+		input[type="email"], input[type="password"] {
+			display: block;
+			margin-bottom: 10px;
+			padding: 10px;
+			width: 100%;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+		
+		input[type="submit"] {
+			background-color: #0072c6;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		
+		input[type="submit"]:hover {
+			background-color: #005ea2;
+		}
+		
+		.create-account {
+			text-align: center;
+			margin-top: 20px;
+		}
+		
+		.create-account a {
+			color: #0072c6;
+			text-decoration: none;
+		}
+		
+		.create-account a:hover {
+			text-decoration: underline;
+		}
+		
+		.register-form label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		
+		.register-form input[type="text"], .register-form input[type="email"], .register-form input[type="password"] {
+			display: block;
+			margin-bottom: 10px;
+			padding: 10px;
+			width: 100%;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+		
+		.register-form input[type="submit"] {
+			background-color: #0072c6;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			margin-top: 10px;
+		}
+		
+		.register-form input[type="submit"]:hover {
+			background-color: #005ea2;
+		}
+        .create{
+                margin-left: 40rem;
+        }
+	</style>
+</head>
+<body>
+	<h2 class="create">Create new account</h2>
+		{{#if userloginErr}}
+	  <p style="color:red">Invalid Username or Password</p>
+	     {{/if}}
+	<form accept="/register" method="post" class="register-form">
+		<label for="first-name">Name:</label>
+		<input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" placeholder="Enter your email address">
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" placeholder="Enter your password">
+		<input type="submit" value="Register">
+	    <div class="create-account">
+			Already have account ? <a href="/login">Log in here</a>
+		</div>
+    </form>
+	
